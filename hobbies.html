@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies and Interests</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Hobbies and Interests</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies and Interests</a></li>
+                <li><a href="work.html">Education and Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hobbies">
+            <h2>My Hobbies</h2>
+
+	<div class="filter-controls">
+                <button data-filter="all">All</button>
+                <button data-filter="personal">Personal</button>
+                <button data-filter="health">Health</button>
+            </div>
+
+            <ul>
+                <li class="hobby-item" data-category="personal">
+                    <img src="images/bethelwemustrespond.png" alt="We Must Respond" class="icon">
+                    Listening to Christian music to embrace His presence
+		    <div class="hobby-info hidden">Additional information about this hobby...</div>
+                </li>
+                <li class="hobby-item" data-category="health">
+                    <img src="images/walking.png" alt="Exercising" class="icon">
+                    Exercising
+		<div class="hobby-info hidden">Additional information about this hobby...</div>
+                </li>
+                <li class="hobby-item" data-category="personal">
+                    <img src="images/newspaper.png" alt="Political News" class="icon">
+                    Reading political news to be informed of what's going on in the world
+		<div class="hobby-info hidden">Additional information about this hobby...</div>
+                </li>
+            </ul>
+        </section>
+
+
+        <section class="skills">
+            <h2>Skills and Achievements</h2>
+            <ol>
+                <li>
+                    <img src="images/coding.png" alt="Coding" class="icon">
+                    Proficient in Java, C++, Python, HTML, CSS and SQL programming languages 
+                </li>
+		<div class="progress-bar" id="coding-progress">
+            	<div class="progress"></div>
+        	</div>
+                <li>
+                    <img src="images/office.png" alt="Microsoft Office" class="icon">
+                    Knowledge in Microsoft Word, Excel, PowerPoint, OneNote, and Access
+                </li>
+                <div class="progress-bar" id="office-progress">
+            	<div class="progress"></div>
+        	</div>
+		<li>
+                    <img src="images/windows.png" alt="Windows" class="icon">
+                    Knowledge of iOS, macOS, and Windows operating systems
+                </li>
+		<div class="progress-bar" id="windows-progress">
+            	<div class="progress"></div>
+        	</div>
+            </ol>
+        </section>
+
+
+        <div class="buttons">
+                <a href="index.html" class="button">Back to Main Page</a>
+                <a href="work.html" class="button">See My Resume</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact me at: <a href="mailto:theodore.wright2@icloud.com">theodore.wright2@icloud.com</a></p>
+        <p>Follow me on social media: 
+            <a href="https://www.instagram.com/theodorepwright/" target="_blank">Instagram</a> | 
+            <a href="https://www.linkedin.com/in/theodorepwright/" target="_blank">LinkedIn</a>
+        </p>
+        <p>© 2025 by Theodore P. Wright</p>
+    </footer>
+<script src="js/hobbies.js"></script>
+</body>
+</html>

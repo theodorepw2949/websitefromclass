@@ -1,0 +1,244 @@
+/* General styles applied across all three pages */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex; /* Flexbox is used */
+  justify-content: space-between;
+  margin: 20px;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.profile {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Doing something creative to make the image a circle instead of a square */
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Here at the sidebar I make sure that it is at the side of the main content rather than below it */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+footer a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Styles for the lists on Page 2 */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* For Page 3, the table styles are shown as follows */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-unit);
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid black;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: var(--button-hover);
+}
+
+/* Buttons for all three pages */
+.buttons a {
+    margin-top: 10px; /* Adds space between the table and the buttons */
+    margin-right: 10px;
+    display: inline-block;
+    background-color: green;
+    color: black;
+    padding: 10px;
+    margin-right: var(--spacing-unit);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons a:hover {
+    background-color: #66FF99;
+    transform: scale(1.05);
+}
+
+/* Flexbox and Grid Layout for Page 2 */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-unit);
+}
+
+.hobbies ul, .skills ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hobbies li, .skills li {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-unit);
+    font-size: 1.2rem;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: var(--spacing-unit);
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr; /* On smaller screens, the columns are stacked */
+    }
+}
+
+/* Additional Selectors and Styling for Specific Pages */
+
+/* About Page - Specific Styles for 'More About Me' */
+#about {
+    background-color: #eaeaea;
+    padding: var(--spacing-unit);
+}
+
+/* Pseudo-Class Selector for Hover Effects */
+h1:hover {
+    color: var(--accent-color);
+}
+
+/* Class Selector for Button Styles */
+.button {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Pseudo-Element for Custom Styling */
+h2::before {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* ID Selector for Targeting Specific Elements */
+#contact-info {
+    margin-top: var(--spacing-unit);
+}
+
+/* Attribute Selectors */
+a[href^="https://"] {
+    color: #0066cc; /* Style external links */
+}
+
+a[href^="mailto:"] {
+    color: #0066cc; /* Style email links */
+}
+
+/* Contextual Selectors */
+header nav a {
+    font-weight: bold; /* Links within the navigation */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .buttons a {
+        padding: 0.6rem 1.2rem;
+    }
+
+    table, .main-content {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-top: var(--spacing-unit);
+    }
+}
+.hidden {
+  display: none;
+}
+.progress-bar {
+    width: 100%;
+    background-color: #eaeaea;  /* Light grey background for the progress bar */
+    border-radius: 10px;
+    overflow: hidden;  /* Ensures the progress bar is confined within its container */
+}
+
+.progress {
+    height: 20px;
+    background-color: green;
+    width: 0%;  /* Initial width */
+    transition: width 0.5s ease;  /* Smooth transition for width change */
+}
+
+
+
